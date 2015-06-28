@@ -1,3 +1,7 @@
+// summaryReanges(int[] nums) method is the solution of the following Question:
+// https://leetcode.com/problems/summary-ranges/
+// Author: Michael Tong
+
 package tests.algorithm.leetcode;
 
 import java.util.*;

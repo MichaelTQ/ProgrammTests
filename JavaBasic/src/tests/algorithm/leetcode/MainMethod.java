@@ -1,6 +1,6 @@
 package tests.algorithm.leetcode;
 
-public class ArrayAlgorithmTest {
+public class MainMethod {
 	public static void main(String[] args) {
 		System.out.println("Hello, world!");
 		
