@@ -7,6 +7,9 @@ public class MainMethod {
 		// MySolutionTests.LC228Test();
 		
 		// https://leetcode.com/problems/basic-calculator-ii/
-		MySolutionTests.LC227Test();
+		// MySolutionTests.LC227Test();
+		
+		// https://leetcode.com/problems/invert-binary-tree/
+		
 	}
 }
