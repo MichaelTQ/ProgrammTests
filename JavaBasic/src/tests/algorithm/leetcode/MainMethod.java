@@ -10,6 +10,6 @@ public class MainMethod {
 		// MySolutionTests.LC227Test();
 		
 		// https://leetcode.com/problems/invert-binary-tree/
-		MySolutionTests.LC226Test();
+		// MySolutionTests.LC226Test();
 	}
 }
