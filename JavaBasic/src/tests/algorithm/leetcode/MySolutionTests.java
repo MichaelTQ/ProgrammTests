@@ -1,5 +1,7 @@
 package tests.algorithm.leetcode;
 
+import binarytree.datastructure.MyBST;
+
 public class MySolutionTests {
 	public static void LC228Test() {
 		int[][] nums = {
@@ -28,5 +30,18 @@ public class MySolutionTests {
 			ILCSolution lc227 = new LeetCode227(expression);
 			lc227.myPrint();
 		}
+	}
+	
+	public static void LC226Test() {
+		MyBST tree = new MyBST();
+		tree.addNode(4);
+		tree.addNode(2);
+		tree.addNode(7);
+		tree.addNode(9);
+		tree.addNode(1);
+		tree.addNode(3);
+		tree.addNode(6);
+		
+		new MyBST( new LeetCode226(tree.getHead()).invertTreeRecursive(tree.getHead())).myPrintTree();
 	}
 }

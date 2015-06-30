@@ -130,5 +130,13 @@ public class MyBST {
 			}
 		}
 	}
+
+	public TreeNode getHead() {
+		return head;
+	}
+
+	public void setHead(TreeNode head) {
+		this.head = head;
+	}
 	
 }
