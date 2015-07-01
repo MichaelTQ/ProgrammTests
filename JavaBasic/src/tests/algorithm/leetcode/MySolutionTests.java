@@ -44,4 +44,22 @@ public class MySolutionTests {
 		
 		new MyBST( new LeetCode226(tree.getHead()).invertTreeRecursive(tree.getHead())).myPrintTree();
 	}
+	
+	public static void LC224Test() {
+		String[] arrTestCases = {
+/*			"1 + 1",
+			" 2-1 + 2 ",
+			"(1+(4+5+2)-3)+(6+8)",
+			"()",
+			"(1)+(3)",
+			"1-(2+3-(4+(5-(1-(2+4-(5+6))))))",
+			"1 -1",
+			"   (  3 ) ",*/
+			"(5-(1+(5)))",
+		};
+		
+		for(String s: arrTestCases) {
+			System.out.println("\"" + s + "\"" + " => " + new LeetCode224().calculate(s));
+		}
+	}
 }

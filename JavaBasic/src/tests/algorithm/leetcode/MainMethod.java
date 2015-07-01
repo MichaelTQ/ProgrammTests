@@ -11,5 +11,8 @@ public class MainMethod {
 		
 		// https://leetcode.com/problems/invert-binary-tree/
 		// MySolutionTests.LC226Test();
+		
+		// https://leetcode.com/problems/basic-calculator/
+		MySolutionTests.LC224Test();
 	}
 }
