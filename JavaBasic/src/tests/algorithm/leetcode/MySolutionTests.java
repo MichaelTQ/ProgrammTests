@@ -62,4 +62,18 @@ public class MySolutionTests {
 			System.out.println("\"" + s + "\"" + " => " + new LeetCode224().calculate(s));
 		}
 	}
+	
+	public static void LC223Test() {
+		int testCases[][] = {
+				{-3, 0, 3, 4, 0, -1, 9, 2},
+				{0, 0, 0, 0, -1, -1, -1, -1},
+				{0, 0, 0, 0, -1, -1, 1, 1},
+				{-2, -2, 2, 2, -2, -2, 2, 2},
+				{-2, -2, 2, 2, -3, 1, -1, 3},
+				{-2, -2, 2, 2, 1, -3, 3, 3}
+		};
+		for(int []arr:testCases) {
+			System.out.println(new LeetCode223().computeArea(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7]) );
+		}
+	}
 }

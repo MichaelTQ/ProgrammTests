@@ -13,6 +13,9 @@ public class MainMethod {
 		// MySolutionTests.LC226Test();
 		
 		// https://leetcode.com/problems/basic-calculator/
-		MySolutionTests.LC224Test();
+		// MySolutionTests.LC224Test();
+		
+		// https://leetcode.com/problems/rectangle-area/
+		MySolutionTests.LC223Test();
 	}
 }
