@@ -3,15 +3,23 @@ package tests.algorithm.leetcode;
 public class LeetCode223 implements ILCSolution {
 	
 	public int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {
-		int xA1 = this.getSmaller(A, C);
-		int xA2 = this.getBigger(A, C);
-		int yA1 = this.getSmaller(B, D);
-		int yA2 = this.getBigger(B, D);
+		//int xA1 = this.getSmaller(A, C);
+		int xA1 = A;
+		//int xA2 = this.getBigger(A, C);
+		int xA2 = C;
+		//int yA1 = this.getSmaller(B, D);
+		int yA1 = B;
+		//int yA2 = this.getBigger(B, D);
+		int yA2 = D;
 		
-		int xB1 = this.getSmaller(E, G);
-		int xB2 = this.getBigger(E, G);
-		int yB1 = this.getSmaller(F, H);
-		int yB2 = this.getBigger(F, H);
+		//int xB1 = this.getSmaller(E, G);
+		int xB1 = E;
+		//int xB2 = this.getBigger(E, G);
+		int xB2 = G;
+		//int yB1 = this.getSmaller(F, H);
+		int yB1 = F;
+		//int yB2 = this.getBigger(F, H);
+		int yB2 = H;
 		
 		int common = 0;
 		int aArea = (xA2 - xA1) * (yA2 - yA1);
@@ -48,13 +56,13 @@ public class LeetCode223 implements ILCSolution {
 		}
 	}
 	
-	private int getBigger(int a, int b) {
-		if(a < b) {
-			return b;
-		} else {
-			return a;
-		}
-	}
+//	private int getBigger(int a, int b) {
+//		if(a < b) {
+//			return b;
+//		} else {
+//			return a;
+//		}
+//	}
 	
 	@Override
 	public void myPrint() {
