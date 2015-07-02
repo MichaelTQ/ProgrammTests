@@ -16,6 +16,9 @@ public class MainMethod {
 		// MySolutionTests.LC224Test();
 		
 		// https://leetcode.com/problems/rectangle-area/
-		MySolutionTests.LC223Test();
+		// MySolutionTests.LC223Test();
+		
+		// https://leetcode.com/problems/count-complete-tree-nodes/
+		MySolutionTests.LC222Test();
 	}
 }
