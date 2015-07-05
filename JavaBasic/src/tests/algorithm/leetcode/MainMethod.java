@@ -19,6 +19,9 @@ public class MainMethod {
 		// MySolutionTests.LC223Test();
 		
 		// https://leetcode.com/problems/count-complete-tree-nodes/
-		MySolutionTests.LC222Test();
+		// MySolutionTests.LC222Test();
+		
+		// https://leetcode.com/problems/maximal-square/
+		MySolutionTests.LC221Test();
 	}
 }
