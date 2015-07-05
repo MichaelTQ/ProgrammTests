@@ -151,4 +151,44 @@ public class MySolutionTests {
 			System.out.println(new LeetCode221().maximalSquare(matrix));
 		}
 	}
+	
+	public static void LC220Test() {
+		int[][] tests = {
+				{-1, -1},
+			};
+			
+			System.out.println(new LeetCode220().containsNearbyAlmostDuplicate(tests[0], 1, 0));
+	}
+	
+	public static void LC219Test() {
+		class TestCase {
+			int[] nums;
+			int k;
+			
+			public TestCase(int[] nums, int k) {
+				this.nums = nums;
+				this.k = k;
+			}
+		}
+		int[] nums1 = {1, 2, 3, 1};
+		int[] nums2 = {3, 3};
+		int[] nums3 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		int[] nums4 = {1, 2};
+		
+		TestCase [] cases = {
+			new TestCase(null, 0),
+			new TestCase(nums1, 3),
+			new TestCase(nums2, 2),
+			new TestCase(nums3, 15),
+			new TestCase(nums4, 2),
+		};
+		
+		for(TestCase testcase: cases) {
+			System.out.println(new LeetCode219().containsNearbyDuplicate(testcase.nums, testcase.k));
+		}
+	}
+	
+	public static void LC218Test() {
+		
+	}
 }

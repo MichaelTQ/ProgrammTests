@@ -22,6 +22,15 @@ public class MainMethod {
 		// MySolutionTests.LC222Test();
 		
 		// https://leetcode.com/problems/maximal-square/
-		MySolutionTests.LC221Test();
+		// TODO: Skip for now, to finish this later.
+		// MySolutionTests.LC221Test();
+		
+		// https://leetcode.com/problems/contains-duplicate-iii/
+		MySolutionTests.LC220Test();
+		
+		// https://leetcode.com/problems/contains-duplicate-ii/
+		// MySolutionTests.LC219Test();
+		
+		// 
 	}
 }

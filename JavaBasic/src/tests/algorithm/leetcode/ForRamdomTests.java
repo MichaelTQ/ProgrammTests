@@ -1,13 +1,15 @@
 package tests.algorithm.leetcode;
 
+import java.util.*;
+
 public class ForRamdomTests {
 	
 	public static void main(String[] args) {
-		int [][] matrics = {
-				{},
-				{},
-		};
+		Hashtable<Integer, Integer> table = new Hashtable<Integer, Integer>();
 		
-		System.out.println(matrics.length);
+		table.put(10, 10);
+		System.out.println(table.containsKey(10));
+		
+		System.out.println(table.get(10));
 	}
 }
