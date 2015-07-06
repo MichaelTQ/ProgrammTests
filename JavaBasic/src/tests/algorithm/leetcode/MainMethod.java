@@ -32,6 +32,9 @@ public class MainMethod {
 		// MySolutionTests.LC219Test();
 		
 		// https://leetcode.com/problems/contains-duplicate/
-		MySolutionTests.LC217Test();
+		// MySolutionTests.LC217Test();
+		
+		// https://leetcode.com/problems/combination-sum-iii/
+		MySolutionTests.LC216Test();
 	}
 }
