@@ -26,11 +26,12 @@ public class MainMethod {
 		// MySolutionTests.LC221Test();
 		
 		// https://leetcode.com/problems/contains-duplicate-iii/
-		MySolutionTests.LC220Test();
+		// MySolutionTests.LC220Test();
 		
 		// https://leetcode.com/problems/contains-duplicate-ii/
 		// MySolutionTests.LC219Test();
 		
-		// 
+		// https://leetcode.com/problems/contains-duplicate/
+		MySolutionTests.LC217Test();
 	}
 }

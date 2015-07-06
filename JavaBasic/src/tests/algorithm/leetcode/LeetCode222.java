@@ -2,7 +2,7 @@ package tests.algorithm.leetcode;
 
 import binarytree.datastructure.*;
 
-public class LC222 implements ILCSolution {
+public class LeetCode222 implements ILCSolution {
 	
 	public int countNodes(TreeNode root) {
 	    if(root==null)

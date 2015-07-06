@@ -87,7 +87,7 @@ public class MySolutionTests {
 		tree.addNode(3);
 		tree.addNode(6);
 		
-		System.out.println(new LC222().countNodes(tree.getHead()));
+		System.out.println(new LeetCode222().countNodes(tree.getHead()));
 	}
 	
 	public static void LC221Test() {
@@ -189,6 +189,19 @@ public class MySolutionTests {
 	}
 	
 	public static void LC218Test() {
-		
+		System.out.println("Don't like it, skipped!");
+	}
+	
+	public static void LC217Test() {
+		int [][] tests = {
+			{},
+			{1, 3, 55, -19},
+			{1},
+			{1, 4, -10},
+			{1, 9, 8, 1},
+		};
+		for(int[] arr:tests) {
+			System.out.println(new LeetCode217().containsDuplicate(arr));
+		}
 	}
 }
