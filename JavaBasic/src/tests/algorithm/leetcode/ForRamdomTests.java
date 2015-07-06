@@ -5,11 +5,29 @@ import java.util.*;
 public class ForRamdomTests {
 	
 	public static void main(String[] args) {
-		Hashtable<Integer, Integer> table = new Hashtable<Integer, Integer>();
+		int[] arr = {1, 3, 2, 9, 5};
 		
-		table.put(10, 10);
-		System.out.println(table.containsKey(10));
+		TreeSet<Integer> treeSet = new TreeSet<Integer>();
 		
-		System.out.println(table.get(10));
+		for(int val:arr) {
+			treeSet.add(val);
+		}
+		
+		for(int val:treeSet) {
+			System.out.println(val);
+		}
+		
+		System.out.println("================");
+		
+		System.out.println( treeSet.headSet(3) );
+		
+		System.out.println( treeSet.headSet(3).getClass() );
+		
+		System.out.println( treeSet.tailSet(3) );
+		
+		System.out.println( treeSet.ceiling(4) );
+		
+		System.out.println( treeSet.floor(4) );
+		
 	}
 }

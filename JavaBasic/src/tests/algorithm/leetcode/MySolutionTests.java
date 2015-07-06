@@ -157,7 +157,7 @@ public class MySolutionTests {
 				{-1, -1},
 			};
 			
-			System.out.println(new LeetCode220().containsNearbyAlmostDuplicate(tests[0], 1, 0));
+			System.out.println(new LeetCode220().containsNearbyAlmostDuplicate(tests[0], 1, -1));
 	}
 	
 	public static void LC219Test() {
