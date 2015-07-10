@@ -7,27 +7,28 @@ import java.util.*;
 public class LeetCode216 implements ILCSolution {
 	
 	public List<List<Integer>> combinationSum3(int k, int n) {
-		if(k == 1 && n <= 9){
-			ArrayList<Integer> innerList = new ArrayList<Integer>();
-			innerList.add(n);
-			ArrayList<List<Integer>> returnList = new ArrayList<List<Integer>>();
-			returnList.add(innerList);
-			return returnList;
-		} else if(k == 0) {
-			return new ArrayList<List<Integer>>();
-		}
-		
-		List<List<Integer>> list = new ArrayList<List<Integer>>();
-		
-		for(int i = 1; i <= n && i <= 9; i++) {
-			List<List<Integer>> subList = combinationSum3(k - 1, n - i);
-			for(List<Integer> innerList:subList) {
-				innerList.add(0, i);
-			}
-		}
-		
-		return list;
-	}
+        List<List<Integer>> result= new ArrayList<>();
+        dfs(k,n,1,new ArrayList<Integer>(),result);
+        return result;
+    }
+
+    public void dfs(int k, int target, int start,List<Integer>path,List<List<Integer>>result){
+        if(k==0&&target==0){
+            result.add(path);
+            return;
+        }
+        if(k<=0) return;
+        for(int i=start;i<=9;i++){
+            int newT=target-i;    
+            if(newT>=0){
+                List<Integer> nPath= new ArrayList<>(path);
+                nPath.add(i);
+                dfs(k-1,newT,i+1,nPath,result);
+            }else{
+                break;
+            }
+        }
+    }
 
 	@Override
 	public void myPrint() {
