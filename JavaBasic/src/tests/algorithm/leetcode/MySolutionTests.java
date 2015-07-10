@@ -207,14 +207,28 @@ public class MySolutionTests {
 	
 	public static void LC216Test() {
 		int[][] tests = {
-				{3, 7},
-				{3, 9},
-				{1, 7},
-				{2, 9},
-				{2, 18},
+			{3, 7},
+			{3, 9},
+			{1, 7},
+			{2, 9},
+			{2, 18},
 		};
 		for(int[] test: tests) {
 			System.out.println(new LeetCode216().combinationSum3(test[0], test[1]));
+		}
+	}
+	
+	public static void LC214Test() {
+		String[] tests = {
+			"a",
+			"",
+			null,
+			"aacecaaa",
+			"abcd",
+		};
+		
+		for(String s: tests) {
+			System.out.println(s + " => " + new LeetCode214().shortestPalindrome(s));
 		}
 	}
 }

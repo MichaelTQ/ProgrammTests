@@ -35,6 +35,9 @@ public class MainMethod {
 		// MySolutionTests.LC217Test();
 		
 		// https://leetcode.com/problems/combination-sum-iii/
-		MySolutionTests.LC216Test();
+		// MySolutionTests.LC216Test();
+		
+		// https://leetcode.com/problems/shortest-palindrome/
+		MySolutionTests.LC214Test();
 	}
 }

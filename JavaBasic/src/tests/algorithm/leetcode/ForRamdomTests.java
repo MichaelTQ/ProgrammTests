@@ -1,33 +1,33 @@
 package tests.algorithm.leetcode;
 
-import java.util.*;
-
 public class ForRamdomTests {
 	
 	public static void main(String[] args) {
-		int[] arr = {1, 3, 2, 9, 5};
+		String []tests = {
+			"a",
+			"abd",
+			"aba",
+			"abba",
+		};
 		
-		TreeSet<Integer> treeSet = new TreeSet<Integer>();
-		
-		for(int val:arr) {
-			treeSet.add(val);
+		for(String s:tests) {
+			System.out.println(isPalindrome(s));
 		}
-		
-		for(int val:treeSet) {
-			System.out.println(val);
+	}
+	
+	private static boolean isPalindrome(String s) {
+		if(s == null) {
+			return false;
 		}
-		
-		System.out.println("================");
-		
-		System.out.println( treeSet.headSet(3) );
-		
-		System.out.println( treeSet.headSet(3).getClass() );
-		
-		System.out.println( treeSet.tailSet(3) );
-		
-		System.out.println( treeSet.ceiling(4) );
-		
-		System.out.println( treeSet.floor(4) );
-		
+		int start = 0;
+		int end = s.length() - 1;
+		while(start < end) {
+			if(s.charAt(start) != s.charAt(end)) {
+				return false;
+			}
+			start++;
+			end--;
+		}
+		return true;
 	}
 }
