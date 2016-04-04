@@ -2,7 +2,7 @@ package answers.cc150.chapter01;
 
 import java.util.*;
 
-public class StringUniqueChar {
+public class C1S1_StringUniqueChar {
 	public static void main(String args[]) {
 		String[] testCases = {
 			"abc",
