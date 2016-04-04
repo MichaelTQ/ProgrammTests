@@ -1,5 +1,5 @@
 package answers.cc150;
 
-public class MySolutionTests {
-
+public interface MySolutionTests {
+	public void test();
 }
