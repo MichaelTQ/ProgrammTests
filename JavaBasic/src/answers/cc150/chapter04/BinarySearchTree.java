@@ -21,11 +21,19 @@ public class BinarySearchTree {
 	
 	private void add(int val, Node node) {
 		if(node == null) {
-			node = new Node(val);
+			return;
 		} else if(node.val > val) {
-			add(val, node.left);
+			if(node.left == null) {
+				node.left = new Node(val);
+			} else {
+				add(val, node.left);
+			}
 		} else if(node.val < val) {
-			add(val, node.right);
+			if(node.right == null) {
+				node.right = new Node(val);
+			} else {
+				add(val, node.right);
+			}
 		}
 	}
 	
@@ -76,7 +84,8 @@ public class BinarySearchTree {
 	private void betterPrint(Node node) {}
 
 	public static void main(String[] args) {
-		BinarySearchTree bst = new BinarySearchTree(5);
+		BinarySearchTree bst = new BinarySearchTree();
+		bst.add(5);
 		bst.add(3);
 		bst.add(15);
 		bst.add(10);
