@@ -34,25 +34,57 @@ public class BinarySearchTree {
 		case DFS_PRE_ORDER:
 			traverseDFSPre(head);
 			break;
+		case DFS_IN_ORDER:
+			traverseDFSIn(head);
+			break;
+		case DFS_POST_ORDER:
+			traverseDFSPost(head);
+			break;
+		case BFS:
+			traverseBFS(head);
+			break;
 		default:
-			
+			betterPrint(head);
 		}
+		System.out.println();
 	}
 	
 	private void traverseDFSPre(Node node) {
 		if(node != null) {
-			System.out.println(node.val);
+			System.out.print(node.val + " ");
 			traverseDFSPre(node.left);
 			traverseDFSPre(node.right);
 		}
 	}
-	private void traverseDFSIn() {}
-	private void traverseDFSPost() {}
+	private void traverseDFSIn(Node node) {
+		if(node != null) {
+			traverseDFSIn(node.left);
+			System.out.print(node.val + " ");
+			traverseDFSIn(node.right);
+		}
+	}
+	private void traverseDFSPost(Node node) {
+		if(node != null) {
+			traverseDFSPost(node.left);
+			traverseDFSPost(node.right);
+			System.out.print(node.val + " ");
+		}
+	}
 	
-	private void betterPrint() {}
+	private void traverseBFS(Node node) {}
+	
+	private void betterPrint(Node node) {}
 
 	public static void main(String[] args) {
+		BinarySearchTree bst = new BinarySearchTree(5);
+		bst.add(3);
+		bst.add(15);
+		bst.add(10);
+		bst.add(17);
 		
+		bst.printTree(EnumTraverseMethods.DFS_PRE_ORDER);
+		bst.printTree(EnumTraverseMethods.DFS_IN_ORDER);
+		bst.printTree(EnumTraverseMethods.DFS_POST_ORDER);
 	}
 
 }
