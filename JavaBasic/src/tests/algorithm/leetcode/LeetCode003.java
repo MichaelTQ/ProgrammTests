@@ -107,13 +107,15 @@ public class LeetCode003 {
 		}
 		return maxLength;
 	}
-}
-
-class TestCase {
-	String str;
-	int expected;
-	public TestCase(String str, int expected) {
-		this.str = str;
-		this.expected = expected;
+	
+	class TestCase {
+		String str;
+		int expected;
+		public TestCase(String str, int expected) {
+			this.str = str;
+			this.expected = expected;
+		}
 	}
 }
+
+
