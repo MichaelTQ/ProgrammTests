@@ -1,3 +1,9 @@
+/**
+ * 	There is another solution:
+ *  http://articles.leetcode.com/longest-palindromic-substring-part-ii
+ *  
+ * */
+
 package tests.algorithm.leetcode;
 
 import java.util.*;
