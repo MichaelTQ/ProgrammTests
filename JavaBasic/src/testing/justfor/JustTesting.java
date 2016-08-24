@@ -7,15 +7,32 @@ import java.util.*;
 public class JustTesting {
 
 	public static void main(String[] args) {
-		SubA1 sub1 = null;
-		A a = new SubA1();
-		System.out.println(a instanceof SubA1);
+		SubA1 a = new SubA1();
 	}
-
 }
-class A {}
+class A {
+	static {
+		System.out.println("parent static method");
+	}
+	public A() {
+		System.out.println("parent contructor");
+	}
+	{
+		System.out.println("parent instance block");
+	}
+}
 
 class SubA1 extends A{
-	public SubA1() {}
+	static {
+		System.out.println("child static method");
+	}
+	public SubA1() {
+		System.out.println("child constructor");
+	}
+	{
+		System.out.println("child instance block");
+	}
 }
-class SubA2 extends A{}
+class SubA2 extends A{
+	
+}
