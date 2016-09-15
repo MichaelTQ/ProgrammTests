@@ -35,4 +35,17 @@ public class TestUtils {
 	public static void printTestRow(String str) {
 		System.out.println(str);
 	}
+	
+	public static void printLinkedList(ListNode node) {
+    	System.out.print("[");
+    	while(node != null) {
+    		if(node.next != null) {
+    			System.out.print(node.val + ", ");
+    		} else {
+    			System.out.print(node.val);
+    		}
+    		node = node.next;
+    	}
+    	System.out.println("]");
+    }
 }
