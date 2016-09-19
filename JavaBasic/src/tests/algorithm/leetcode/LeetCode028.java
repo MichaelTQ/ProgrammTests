@@ -1,8 +1,39 @@
 package tests.algorithm.leetcode;
 
 public class LeetCode028 {
+	public int strStr(String txt, String pat) {
+		if(pat.equals("")) {
+			return 0;
+		}
+		int lps[] = new int[pat.length()];
+		int j = 0;
+		computeLPSArray(pat, lps);
+		for(int i = 0; i < txt.length(); i++) {
+			while(j > 0 && txt.charAt(i) != pat.charAt(j)) {
+				j = lps[j-1];
+			}
+			if (txt.charAt(i) == pat.charAt(j)) {
+				j++;
+				if(j == pat.length()) return i - j + 1;
+			}
+		}
+		return -1;
+	}
+	private void computeLPSArray(String pat, int lps[]) {
+		lps[0] = 0;
+		for(int i = 1; i < lps.length-1; i++) {
+			int j = lps[i-1];
+			while(j > 0 && pat.charAt(i) != pat.charAt(j)) {
+				j = lps[j-1];
+			}
+			if(pat.charAt(i) == pat.charAt(j)) {
+				j++;
+			}
+			lps[i] = j;
+		}
+	}
 	// TODO: I need to learn KMP Algorithm
-    public int strStr(String haystack, String needle) {
+    public int strStrDumb(String haystack, String needle) {
     	if (haystack.equals(needle) || needle.equals("")) {
     		return 0;
     	}
@@ -32,7 +63,9 @@ public class LeetCode028 {
 				{"abcd", "bcd"},
 				{"abcd", "efg"},
 				{"aaa", "aa"},
-				{"aaa", "a"}
+				{"aaa", "a"},
+				{"", ""},
+				{"mississippi", "issip"},
 		};
 		for(String[] testCase: testCases) {
 			String haystack = testCase[0];
