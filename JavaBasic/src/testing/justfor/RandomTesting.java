@@ -1,24 +1,17 @@
 package testing.justfor;
 
 public class RandomTesting {
-
 	public static void main(String[] args) {
-		try {
-			new Thread().join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		Thread.yield();
+		test(3, 5);
+		test(4, 7);
+		test(8, 1);
 		
-		Object object = new Object();
-		synchronized(object) {
-			object.notify();
-			object.notifyAll();
-			try {
-				object.wait(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
+	}
+	private static void test(int i, int j) {
+		int iStart = i - i%3;
+		int jStart = j - j%3;
+		System.out.println(iStart);
+		System.out.println(jStart);
+		System.out.println("==========");
 	}
 }
