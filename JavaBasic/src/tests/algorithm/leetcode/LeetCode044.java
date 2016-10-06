@@ -1,19 +1,46 @@
 package tests.algorithm.leetcode;
 
 public class LeetCode044 {
+	public boolean isMatch(String s,String p) {
+		int i = 0;
+		int j = 0;
+		int starIndex = -1;
+		int iIndex = -1;
+		
+		while(i < s.length()) {
+			if(j<p.length() && (p.charAt(j)=='?' || p.charAt(j)==s.charAt(i))) {
+				i++;j++;
+			} else if (j<p.length() && p.charAt(j)=='*') {
+				starIndex=j;
+				iIndex=i;
+				j++;
+			} else if (starIndex != -1) {
+				j = starIndex+1;
+				i = iIndex+1;
+				iIndex++;
+			} else {
+				return false;
+			}
+		}
+		while(j<p.length() && p.charAt(j)=='*') {
+			j++;
+		}
+		return j==p.length();
+	}
+	
 	private boolean wildCardHelper(String s, String p) {
 		if(p.length() == 1) {
 			return true;
 		}
 		for(int i = 0; i < s.length(); i++) {
 			String sub = s.substring(i);
-			if(isMatch(sub, p.substring(1))) {
+			if(isMatchSlow(sub, p.substring(1))) {
 				return true;
 			}
 		}
 		return false;
 	}
-	public boolean isMatch(String s, String p) {
+	public boolean isMatchSlow(String s, String p) {
 		if(s.equals(p) || p.equals("*")) return true;
 		if(s == null || s.length() == 0) return false;
 		int i = 0;
